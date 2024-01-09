@@ -1,0 +1,118 @@
+body {
+    font-family: 'Comic Neue', cursive, 'Roboto', sans-serif;
+    background-color: #989898;
+    /* Light Gray */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    margin: auto;
+    background-color: aliceblue;
+    border-radius: 23px;
+    padding: 40px;
+}
+
+h1 {
+    color: #333;
+    /* Dark Gray */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.weather-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#cityInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 2px solid #3498db;
+    /* Dodger Blue */
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    /* Dodger Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    /* Slightly Darker Blue */
+}
+
+.weather-card {
+    /* display: none; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+    /* Dark Gray */
+    transition: background 0.3s;
+}
+
+.fun-text {
+    font-size: 1.2em;
+    color: #e67e22;
+    /* Carrot Orange */
+    margin-top: 10px;
+}
+
+.fun-emoji {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Animation for weather card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.weather-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .weather-form {
+        width: 80%;
+    }
+
+    #cityInput {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
